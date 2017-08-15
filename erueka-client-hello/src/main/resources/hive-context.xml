@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:hdp="http://www.springframework.org/schema/hadoop"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/hadoop
+        http://www.springframework.org/schema/hadoop/spring-hadoop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.java.spring.client.hello" />
+    <hdp:hive-client-factory id="hiveClientFactory" hive-data-source-ref="hiveDataSource"/>
+
+    <bean id="hiveDriver" class="org.apache.hive.jdbc.HiveDriver"/>
+    <bean id="hiveDataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+        <constructor-arg name="driver" ref="hiveDriver"/>
+        <constructor-arg name="url" value="jdbc:hive2://10.209.20.33:10005"/>
+        <constructor-arg name="username" value="sre"/>
+        <constructor-arg name="password" value="72fHTBrZUs"/>
+    </bean>
+
+    <hdp:hive-template id="hiveTemplate"/>
+    <!--<bean id="hiveTemplate" class="org.springframework.data.hadoop.hive.HiveTemplate"-->
+    <!-- Test bean for communicating with external hive2 server over HiveClient. -->
+    <!--<bean id="testBean" class="myhadoop.hiveserver.test.TestBean" p:hive-template-ref="hiveTemplate"/>
+-->
+</beans>

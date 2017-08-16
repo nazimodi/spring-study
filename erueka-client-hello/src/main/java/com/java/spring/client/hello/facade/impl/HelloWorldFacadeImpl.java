@@ -24,7 +24,9 @@ public class HelloWorldFacadeImpl implements HelloWorldFacade{
    @Autowired
    private HiveExecuteService hiveExecuteService;
 
+   @Override
     public String hiveQuery(@Validated @RequestBody HelloHiveVO helloHiveVO) {
         return hiveExecuteService.executeHiveSql(helloHiveVO.getHiveSql()).toString();
     }
+
 }

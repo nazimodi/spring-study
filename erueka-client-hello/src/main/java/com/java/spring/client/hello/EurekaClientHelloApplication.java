@@ -17,6 +17,7 @@ import org.springframework.data.hadoop.hive.HiveTemplate;
  */
 /*@EnableEurekaClient*/
 @SpringBootApplication
+@SpringBootConfiguration
 @EnableAutoConfiguration
 @Configuration
 @ComponentScan(basePackages = {"com.java.spring.client.hello.service", "com.java.spring.client.facade"})

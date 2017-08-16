@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RequestMapping(value = "/v1/hello", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public interface HelloWorldFacade {
-    @RequestMapping(value = "/hive", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/hive", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     String hiveQuery(@Validated @RequestBody HelloHiveVO helloHiveVO);
 

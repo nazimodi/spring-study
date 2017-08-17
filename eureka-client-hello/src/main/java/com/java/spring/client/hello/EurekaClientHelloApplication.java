@@ -20,7 +20,7 @@ import org.springframework.data.hadoop.hive.HiveTemplate;
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @Configuration
-@ComponentScan(basePackages = {"com.java.spring.client.hello.service", "com.java.spring.client.facade"})
+@ComponentScan(basePackages = {"com.java.spring.client.hello"})
 @ImportResource(locations = {"classpath:hive-context.xml"})
 public class EurekaClientHelloApplication {
     public static void main(String[] args) {

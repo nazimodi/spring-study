@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		<module>eureka-server</module>
-		<module>erueka-client-hello</module>
+		<module>eureka-client-hello</module>
 	</modules>
 	<packaging>pom</packaging>
 

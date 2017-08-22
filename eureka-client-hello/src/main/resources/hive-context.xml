@@ -14,9 +14,9 @@
     <bean id="hiveDriver" class="org.apache.hive.jdbc.HiveDriver"/>
     <bean id="hiveDataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
         <constructor-arg name="driver" ref="hiveDriver"/>
-        <constructor-arg name="url" value="jdbc:hive2://10.209.20.33:10005"/>
-        <constructor-arg name="username" value="sre"/>
-        <constructor-arg name="password" value="72fHTBrZUs"/>
+        <constructor-arg name="url" value="jdbc:hive2://your_localhost:10005"/>
+        <constructor-arg name="username" value="your_username"/>
+        <constructor-arg name="password" value="your_password"/>
     </bean>
 
     <hdp:hive-template id="hiveTemplate"/>

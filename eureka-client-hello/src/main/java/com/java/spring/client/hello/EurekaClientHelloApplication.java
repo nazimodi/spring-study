@@ -1,5 +1,6 @@
 package com.java.spring.client.hello;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -19,7 +20,8 @@ import org.springframework.context.annotation.ImportResource;
 @EnableAutoConfiguration
 @Configuration
 @ComponentScan(basePackages = {"com.java.spring.client.hello"})
-@ImportResource(locations = {"classpath:hive-context.xml"})
+@MapperScan(basePackages = {"com.java.spring.client.hello.mapper"})
+/*@ImportResource(locations = {"classpath:hive-context.xml"})*/
 public class EurekaClientHelloApplication {
     public static void main(String[] args) {
         SpringApplication.run(EurekaClientHelloApplication.class, args);

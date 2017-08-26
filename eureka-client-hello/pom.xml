@@ -26,6 +26,7 @@
         <hadoop.version>2.6.0</hadoop.version>
         <!-- Hoorray! -->
         <hive.version>1.0.0</hive.version>
+        <fastjson.version>1.2.15</fastjson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -174,43 +175,41 @@
             <version>2.9.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-jdbc</artifactId>
-            <version>9.0.0.M15</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
+            <version>5.1.39</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.9</version>
         </dependency>
 
-        <!-- mybatis -->
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+        <!--json-->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>1.3.1</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.5</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+
+        <!--mybatis-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.3.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
             <version>1.3.5</version>
+        </dependency>
+
+        <!--tk mapper-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 
@@ -256,6 +255,24 @@
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.5</version>
+                <configuration>
+                    <configurationFile>src/main/resources/mybatis/generator/generatorConfig.xml</configurationFile>
+                    <overwrite>true</overwrite>
+                    <verbose>true</verbose>
+                </configuration>
+                <dependencies>
+                    <!-- 数据库驱动  -->
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.39</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>tk.mybatis</groupId>
+                        <artifactId>mapper-spring-boot-starter</artifactId>
+                        <version>1.1.0</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

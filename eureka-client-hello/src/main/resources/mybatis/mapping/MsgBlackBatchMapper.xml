@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.spring.client.hello.mapper.MsgBlackBatchMapper">
+  <resultMap id="BaseResultMap" type="com.java.spring.client.hello.domain.MsgBlackBatch">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CUSTOMER_TARGET" jdbcType="VARCHAR" property="customerTarget" />
+    <result column="SOURCE_SYSTEM" jdbcType="INTEGER" property="sourceSystem" />
+    <result column="CUSTOMER_REMARK" jdbcType="VARCHAR" property="customerRemark" />
+    <result column="CUSTOMER_NUM" jdbcType="INTEGER" property="customerNum" />
+    <result column="ORGANIZATION" jdbcType="INTEGER" property="organization" />
+    <result column="CUSTOMER_TYPE" jdbcType="INTEGER" property="customerType" />
+    <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+</mapper>

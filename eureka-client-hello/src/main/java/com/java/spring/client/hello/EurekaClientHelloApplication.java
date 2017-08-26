@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @ComponentScan(basePackages = {"com.java.spring.client.hello"})
 @MapperScan(basePackages = {"com.java.spring.client.hello.mapper"})
-/*@ImportResource(locations = {"classpath:hive-context.xml"})*/
+@ImportResource(locations = {"classpath:hive-context.xml"})
 public class EurekaClientHelloApplication {
     public static void main(String[] args) {
         SpringApplication.run(EurekaClientHelloApplication.class, args);

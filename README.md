@@ -29,3 +29,6 @@
 ### 6.2 高可用原理
 ---
 ## 7. nosql和MySQL的优劣
+
+## 8. java book list
+### 8.1 effective java 

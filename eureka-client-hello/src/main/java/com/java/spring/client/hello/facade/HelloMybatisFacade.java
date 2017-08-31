@@ -13,10 +13,10 @@ import java.util.List;
  * @author renqingwang on 2017/8/26.
  * @version 1.0
  */
-@RequestMapping(value = "/hello/mybatis", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/v1/hello", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public interface HelloMybatisFacade {
     @ApiOperation("获取列表")
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "/mybatis", method = RequestMethod.GET)
     @ResponseBody
     List<MsgBlackBatch> list();
 }

@@ -31,4 +31,11 @@
 ## 7. nosql和MySQL的优劣
 
 ## 8. java book list
-### 8.1 effective java 
+### 8.1 深入理解java虚拟机：JVM高级特性与最佳实践
+### 8.2 java并发编程实践
+### 8.3 java多线程编程核心技术
+### 8.4 effective java
+### 8.5 深入分析java web技术内幕
+### 8.6 大型网站技术架构 核心原理与案例
+### 8.7 spring源码深度解析
+### 8.8 从Paxos到Zookeeper分布式一致性原理与实践

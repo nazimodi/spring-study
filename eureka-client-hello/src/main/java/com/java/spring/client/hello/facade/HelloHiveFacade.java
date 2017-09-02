@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(description = "hive库连接测试")
 @RequestMapping(value = "/v1/hello", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-public interface HelloWorldFacade {
+public interface HelloHiveFacade {
     @RequestMapping(value = "/hive", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     @ApiOperation(value = "根据hive sql查询hive库")

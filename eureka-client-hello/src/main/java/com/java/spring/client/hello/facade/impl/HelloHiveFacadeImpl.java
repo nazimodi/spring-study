@@ -1,6 +1,6 @@
 package com.java.spring.client.hello.facade.impl;
 
-import com.java.spring.client.hello.common.condition.ConditionServiceConfirm;
+
 import com.java.spring.client.hello.facade.HelloHiveFacade;
 import com.java.spring.client.hello.facade.vo.HelloHiveVO;
 import com.java.spring.client.hello.service.HiveExecuteService;

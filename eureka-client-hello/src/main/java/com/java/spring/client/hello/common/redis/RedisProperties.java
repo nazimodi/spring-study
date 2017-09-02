@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * @author renqingwang on 2017/8/30.
  * @version 1.0
  */
-@Component
+/*@Component*/
 @ConfigurationProperties(prefix = "redis.cache")
 public class RedisProperties {
     private int expireSeconds;

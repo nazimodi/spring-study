@@ -1,6 +1,7 @@
 package com.java.spring.client.hello.common.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.HostAndPort;
@@ -13,7 +14,8 @@ import java.util.Set;
  * @author renqingwang on 2017/8/30.
  * @version 1.0
  */
-@Configuration
+/*@Configuration*/
+@EnableConfigurationProperties(RedisProperties.class)
 public class JedisClusterConfig {
     @Autowired
     private RedisProperties redisProperties;

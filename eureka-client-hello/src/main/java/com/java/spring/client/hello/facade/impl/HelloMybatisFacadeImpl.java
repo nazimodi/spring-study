@@ -1,5 +1,6 @@
 package com.java.spring.client.hello.facade.impl;
 
+import com.java.spring.client.hello.base.BaseFacade;
 import com.java.spring.client.hello.domain.MsgBlackBatch;
 import com.java.spring.client.hello.facade.HelloMybatisFacade;
 import com.java.spring.client.hello.mapper.MsgBlackBatchMapper;
@@ -14,7 +15,7 @@ import java.util.List;
  * @version 1.0
  */
 @RestController
-public class HelloMybatisFacadeImpl implements HelloMybatisFacade {
+public class HelloMybatisFacadeImpl extends BaseFacade implements HelloMybatisFacade {
     @Autowired
     private MsgBlackBatchMapper msgBlackBatchMapper;
 

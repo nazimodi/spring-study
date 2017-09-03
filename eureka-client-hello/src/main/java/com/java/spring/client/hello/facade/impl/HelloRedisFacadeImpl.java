@@ -1,5 +1,6 @@
 package com.java.spring.client.hello.facade.impl;
 
+import com.java.spring.client.hello.base.BaseFacade;
 import com.java.spring.client.hello.common.jedis.RedisClient;
 import com.java.spring.client.hello.facade.HelloRedisFacade;
 import io.swagger.annotations.ApiParam;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0
  */
 @RestController
-public class HelloRedisFacadeImpl implements HelloRedisFacade {
+public class HelloRedisFacadeImpl extends BaseFacade implements HelloRedisFacade {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
     @Autowired

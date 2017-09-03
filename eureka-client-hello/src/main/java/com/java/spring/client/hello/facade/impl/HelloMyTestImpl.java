@@ -4,10 +4,9 @@ import com.java.spring.client.hello.common.condition.ConditionServiceConfirm;
 import com.java.spring.client.hello.facade.HelloMyTest;
 import com.java.spring.client.hello.service.TestConditionService;
 import com.java.spring.client.hello.service.impl.TestConditionServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

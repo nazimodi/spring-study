@@ -224,6 +224,14 @@
             <version>2.9.0</version>
         </dependency>
         <!--end redis-->
+
+        <!--start mongodb-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <!--end mongodb-->
+
     </dependencies>
 
     <dependencyManagement>

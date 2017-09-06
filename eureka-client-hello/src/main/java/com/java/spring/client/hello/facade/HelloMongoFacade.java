@@ -29,7 +29,7 @@ public interface HelloMongoFacade {
     @RequestMapping(value = "/mongo/report/{id}", method = RequestMethod.GET)
     ResultMessage<Report> getDetail(@ApiParam(value = "文档编号") @PathVariable String id);
 
-    @ApiOperation("获取详情")
+    @ApiOperation("获取列表")
     @RequestMapping(value = "/mongo/report", method = RequestMethod.GET)
     ResultMessage<List<Report>> getList(@ModelAttribute HelloMongoListVO helloMongoListVO);
 

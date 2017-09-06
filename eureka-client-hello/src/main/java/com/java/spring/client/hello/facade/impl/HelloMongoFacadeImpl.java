@@ -42,6 +42,7 @@ public class HelloMongoFacadeImpl implements HelloMongoFacade {
 
     @Override
     public ResultMessage<List<Report>> getList(@ModelAttribute HelloMongoListVO helloMongoListVO) {
-        return ResultMessage.getInstance().success(reportService.findByContentOrTitle(helloMongoListVO.getContent(), helloMongoListVO.getTitle()));
+        List<Report> list = reportService.findByContentOrTitle(helloMongoListVO.getContent(), helloMongoListVO.getTitle());
+        return ResultMessage.getInstance().success(list);
     }
 }

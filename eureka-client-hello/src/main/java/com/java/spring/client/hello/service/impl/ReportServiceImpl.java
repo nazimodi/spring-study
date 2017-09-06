@@ -4,6 +4,7 @@ import com.java.spring.client.hello.entity.Report;
 import com.java.spring.client.hello.repository.ReportRepository;
 import com.java.spring.client.hello.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -35,6 +36,8 @@ public class ReportServiceImpl implements ReportService {
         return reportRepository.findById(id);
     }
 
+    @Override
+    @Cacheable(value = "report_list_cache")
     public List<Report> findByContentOrTitle(String content, String title) {
         return mongoOperations.find(Query.query(Criteria.where("content").is(content).and("title").is(title)), Report.class);
     }

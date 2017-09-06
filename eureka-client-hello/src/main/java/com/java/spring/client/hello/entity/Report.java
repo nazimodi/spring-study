@@ -4,13 +4,14 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Entity;
+import java.io.Serializable;
 
 /**
  * @author renqingwang on 2017/9/5.
  * @version 1.0
  */
 @Document(collection = "report")
-public class Report {
+public class Report implements Serializable{
     @Id
     private String id;
     private String date;

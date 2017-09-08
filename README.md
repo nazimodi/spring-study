@@ -28,7 +28,7 @@
 ### 6.1 一致性原理
 ### 6.2 高可用原理
 ---
-## 7. nosql和MySQL的优劣
+## 7. Nosql和MySQL的优劣
 
 ## 8. java book list
 ### 8.1 深入理解java虚拟机：JVM高级特性与最佳实践
@@ -39,3 +39,10 @@
 ### 8.6 大型网站技术架构 核心原理与案例
 ### 8.7 spring源码深度解析
 ### 8.8 从Paxos到Zookeeper分布式一致性原理与实践
+### 8.8 从Paxos到Zookeeper分布式一致性原理与实践
+
+## 9. 项目经验
+
+## 10. JSM
+### 10.1 hession,burlap,rmi,http invoker
+### 10.2 AMQP,RabbitMQ,ActiveMQ

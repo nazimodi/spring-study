@@ -41,10 +41,6 @@
 ### 8.8 从Paxos到Zookeeper分布式一致性原理与实践
 
 ## 9. 项目经验
-=======
-### 8.8 从Paxos到Zookeeper分布式一致性原理与实践
-
-## 9. 项目经验
 
 ## 10. JSM
 ### 10.1 hession,burlap,rmi,http invoker

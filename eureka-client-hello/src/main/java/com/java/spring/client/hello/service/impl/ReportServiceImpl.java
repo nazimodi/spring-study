@@ -1,5 +1,7 @@
 package com.java.spring.client.hello.service.impl;
 
+import com.google.common.collect.Maps;
+import com.java.spring.client.hello.common.cache.KeyCache;
 import com.java.spring.client.hello.entity.Report;
 import com.java.spring.client.hello.repository.ReportRepository;
 import com.java.spring.client.hello.service.ReportService;
@@ -12,6 +14,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author renqingwang on 2017/9/5.
@@ -32,12 +35,13 @@ public class ReportServiceImpl implements ReportService {
     }
 
     @Override
+    @Cacheable(value = "detail:", keyGenerator = "customKeyGenerator")
     public Report getDetail(String id) {
         return reportRepository.findById(id);
     }
 
     @Override
-    @Cacheable(value = "report_list_cache")
+    @Cacheable(value = KeyCache.KEY_PREFIX, keyGenerator = "customKeyGenerator")
     public List<Report> findByContentOrTitle(String content, String title) {
         return mongoOperations.find(Query.query(Criteria.where("content").is(content).and("title").is(title)), Report.class);
     }

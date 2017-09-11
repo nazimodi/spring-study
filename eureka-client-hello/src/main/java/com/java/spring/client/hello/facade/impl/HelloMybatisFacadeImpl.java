@@ -20,7 +20,7 @@ public class HelloMybatisFacadeImpl extends BaseFacade implements HelloMybatisFa
     private MsgBlackBatchMapper msgBlackBatchMapper;
 
     @Override
-    public  List<MsgBlackBatch> list() {
+    public List<MsgBlackBatch> list() {
         Example example = new Example(MsgBlackBatch.class);
         example.createCriteria().andEqualTo("id", 1);
         List<MsgBlackBatch> msgBlackBatches = msgBlackBatchMapper.selectByExample(example);

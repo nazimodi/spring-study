@@ -1,0 +1,9 @@
+spring:
+  config:
+    location: classpath:/${SERVER_ENVIRONMENT:dev}/
+  application:
+    name: eureka-client-hello
+    
+server:
+  port: 8762
+

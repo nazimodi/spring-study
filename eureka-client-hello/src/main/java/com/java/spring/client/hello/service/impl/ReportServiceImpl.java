@@ -1,6 +1,5 @@
 package com.java.spring.client.hello.service.impl;
 
-import com.google.common.collect.Maps;
 import com.java.spring.client.hello.common.cache.KeyCache;
 import com.java.spring.client.hello.entity.Report;
 import com.java.spring.client.hello.repository.ReportRepository;
@@ -14,7 +13,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author renqingwang on 2017/9/5.

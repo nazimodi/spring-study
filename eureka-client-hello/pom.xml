@@ -237,6 +237,12 @@
             <artifactId>spring-boot-starter-websocket</artifactId>
             <version>1.5.6.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.java.spring</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -297,6 +303,11 @@
                         <groupId>tk.mybatis</groupId>
                         <artifactId>mapper-spring-boot-starter</artifactId>
                         <version>1.1.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.java.spring</groupId>
+                        <artifactId>common</artifactId>
+                        <version>0.0.1-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
             </plugin>

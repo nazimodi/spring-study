@@ -22,6 +22,7 @@
 
         <!--生成的pojo 将implements Serializable-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="com.java.spring.common.plugin.MybatisToStringPlugin"/>
         <commentGenerator>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true"/>

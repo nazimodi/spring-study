@@ -2,12 +2,16 @@ package com.java.spring.client.hello.domain;
 
 import com.java.spring.client.hello.base.BaseDomain;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "MSG_BLACK_BATCH")
 public class MsgBlackBatch extends BaseDomain implements Serializable {
+    @Id
+    @GeneratedValue(generator = "JDBC")
     private Integer id;
 
     private String customerTarget;
@@ -98,5 +102,25 @@ public class MsgBlackBatch extends BaseDomain implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
+        sb.append(", customerTarget=").append(customerTarget);
+        sb.append(", sourceSystem=").append(sourceSystem);
+        sb.append(", customerRemark=").append(customerRemark);
+        sb.append(", customerNum=").append(customerNum);
+        sb.append(", organization=").append(organization);
+        sb.append(", customerType=").append(customerType);
+        sb.append(", operator=").append(operator);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
     }
 }

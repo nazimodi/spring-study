@@ -14,9 +14,10 @@ import java.util.List;
  * @version 1.0
  */
 @Service
-public class HiveExecuteServiceImpl implements HiveExecuteService{
+public class HiveExecuteServiceImpl implements HiveExecuteService {
     @Autowired
     private HiveTemplate hiveTemplate;
+
     public List<String> executeHiveSql(final String hiveSql) {
         List<String> objectList = hiveTemplate.execute(new HiveClientCallback<List<String>>() {
             public List<String> doInHive(HiveClient hiveClient) throws Exception {

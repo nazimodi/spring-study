@@ -3,7 +3,6 @@ package com.java.spring.client.hello.common.cache;
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
@@ -26,9 +25,8 @@ import java.util.Map;
 @Configuration
 @EnableCaching
 public class KeyCache extends CachingConfigurerSupport {
-    private static Logger logger = LoggerFactory.getLogger(KeyCache.class);
-
     public static final String KEY_PREFIX = "my_test:";
+    private static Logger logger = LoggerFactory.getLogger(KeyCache.class);
 
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {

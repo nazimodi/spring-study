@@ -3,7 +3,6 @@ package com.java.spring.client.hello.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
 import java.io.Serializable;
 
 /**
@@ -11,7 +10,7 @@ import java.io.Serializable;
  * @version 1.0
  */
 @Document(collection = "report")
-public class Report implements Serializable{
+public class Report implements Serializable {
     @Id
     private String id;
     private String date;

@@ -9,11 +9,6 @@ import java.io.Serializable;
  * @version 1.0
  */
 public class ResultMessage<T> implements Serializable {
-    private Integer status;
-    private String message;
-    private T data;
-    private static ResultMessage resultMessage;
-
     public static final int SUCCESS = 200;
     public static final int FAIL_BAD_REQUEST = 400;
     public static final int FAIL_PARAM = 4001;
@@ -21,7 +16,6 @@ public class ResultMessage<T> implements Serializable {
     public static final int FAIL_DATABASE = 4003;
     public static final int FAIL_SERVER_ERROR = 500;
     public static final int FAIL_REMOTE_SERVER_ERROR = 5010;
-
     public static final String MESSAGE_SUCCESS = "success";
     public static final String MESSAGE_FAIL_BAD_REQUEST = "bad request,请检查";
     public static final String MESSAGE_FAIL_PARAM = "参数错误，请检查";
@@ -29,6 +23,10 @@ public class ResultMessage<T> implements Serializable {
     public static final String MESSAGE_FAIL_DATABASE = "数据库错误";
     public static final String MESSAGE_FAIL_SERVER_ERROR = "服务器内部错误";
     public static final String MESSAGE_FAIL_REMOTE_SERVER_ERROR = "远端服务器异常";
+    private static ResultMessage resultMessage;
+    private Integer status;
+    private String message;
+    private T data;
 
     private ResultMessage() {
     }
@@ -106,28 +104,28 @@ public class ResultMessage<T> implements Serializable {
         return this;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
     public Integer getStatus() {
         return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public String getMessage() {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     public T getData() {
         return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
     }
 
     @Override

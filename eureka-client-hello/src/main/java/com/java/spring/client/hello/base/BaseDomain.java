@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author renqingwang on 2017/8/26.
  * @version 1.0
  */
-public abstract class BaseDomain  implements Serializable {
+public abstract class BaseDomain implements Serializable {
     @Id
     @GeneratedValue(generator = "JDBC")
     protected Integer id;

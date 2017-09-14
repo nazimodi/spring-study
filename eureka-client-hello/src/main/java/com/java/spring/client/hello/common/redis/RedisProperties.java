@@ -1,7 +1,6 @@
 package com.java.spring.client.hello.common.redis;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 /**
  * @author renqingwang on 2017/8/30.

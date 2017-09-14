@@ -10,7 +10,7 @@ import java.util.List;
  * @author renqingwang on 2017/9/12.
  * @version 1.0
  */
-public class MybatisToStringPlugin extends PluginAdapter{
+public class MybatisToStringPlugin extends PluginAdapter {
     @Override
     public boolean validate(List<String> list) {
         return true;
@@ -60,7 +60,7 @@ public class MybatisToStringPlugin extends PluginAdapter{
         method.addBodyLine("sb.append(\" [\");");//$NON-NLS-1$
         method.addBodyLine("sb.append(\"Hash = \").append(hashCode());");//$NON-NLS-1$
         StringBuilder sb = new StringBuilder();
-        for(Field field : topLevelClass.getFields()) {
+        for (Field field : topLevelClass.getFields()) {
             String property = field.getName();
             sb.setLength(0);
             sb.append("sb.append(\", ").append(property)//$NON-NLS-1$ //$NON-NLS-2$

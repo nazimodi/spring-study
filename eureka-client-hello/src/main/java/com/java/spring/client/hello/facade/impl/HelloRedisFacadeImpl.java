@@ -19,6 +19,7 @@ public class HelloRedisFacadeImpl extends BaseFacade implements HelloRedisFacade
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private RedisClient redisClient;
+
     @Override
     public String jedisGet(@ApiParam(value = "key值") @PathVariable String key) {
         return redisClient.get(key);
@@ -43,7 +44,7 @@ public class HelloRedisFacadeImpl extends BaseFacade implements HelloRedisFacade
 
     @Override
     public String redisTemplateHGet(@ApiParam(value = "key值") @PathVariable String key, @ApiParam(value = "field值") @PathVariable String field) {
-        return (String)stringRedisTemplate.opsForHash().get(key, field);
+        return (String) stringRedisTemplate.opsForHash().get(key, field);
     }
 
     @Override

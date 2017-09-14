@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HelloHiveFacadeImpl extends BaseFacade implements HelloHiveFacade {
-   @Autowired
-   private HiveExecuteService hiveExecuteService;
+    @Autowired
+    private HiveExecuteService hiveExecuteService;
 
-   @Override
+    @Override
     public ResultMessage<String> hiveQuery(@Validated @RequestBody HelloHiveVO helloHiveVO) {
         String data = hiveExecuteService.executeHiveSql(helloHiveVO.getHiveSql()).toString();
         return ResultMessage.getInstance().success(data);

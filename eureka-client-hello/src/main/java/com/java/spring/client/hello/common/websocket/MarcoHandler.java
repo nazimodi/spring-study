@@ -11,7 +11,7 @@ import org.springframework.web.socket.handler.AbstractWebSocketHandler;
  * @author renqingwang on 2017/9/9.
  * @version 1.0
  */
-public class MarcoHandler extends AbstractWebSocketHandler{
+public class MarcoHandler extends AbstractWebSocketHandler {
     private static Logger logger = LoggerFactory.getLogger(MarcoHandler.class);
 
     @Override

@@ -10,27 +10,18 @@ import java.util.Date;
 
 @Table(name = "MSG_BLACK_BATCH")
 public class MsgBlackBatch extends BaseDomain implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(generator = "JDBC")
     private Integer id;
-
     private String customerTarget;
-
     private Integer sourceSystem;
-
     private String customerRemark;
-
     private Integer customerNum;
-
     private Integer organization;
-
     private Integer customerType;
-
     private String operator;
-
     private Date createTime;
-
-    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

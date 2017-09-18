@@ -76,6 +76,6 @@ public abstract class BaseFacade {
         String err = e.getMessage();
        /* HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);*/
-        return ResultMessage.getInstance().fail();
+        return ResultMessage.getInstance().fail(ResultMessage.FAIL_PARAM, err);
     }
 }
